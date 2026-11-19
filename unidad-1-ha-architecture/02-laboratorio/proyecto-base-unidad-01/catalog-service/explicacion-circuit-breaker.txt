@@ -1,0 +1,5 @@
+﻿Práctica 1.2. Circuit Breaker
+
+Se enviaron 200 solicitudes. Las 200 devolvieron HTTP 200, con una disponibilidad observada del 100 %. Hubo 25 respuestas SUCCESS y 175 respuestas DEGRADED_CACHE. El tiempo promedio fue de 0.381 segundos y el máximo fue de 1.418 segundos.
+
+En la etapa anterior, el promedio fue de 0.681 segundos y 117 solicitudes usaron el respaldo. Con el circuito abierto, las solicitudes pueden ir al respaldo sin ejecutar la consulta al catálogo. En esta corrida se observó un menor tiempo promedio y un mayor uso del respaldo. La bitácora se guardó en resilience-sample.txt.

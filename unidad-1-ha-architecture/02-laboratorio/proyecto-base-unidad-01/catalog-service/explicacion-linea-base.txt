@@ -1,0 +1,5 @@
+﻿Práctica 1.1. Línea base
+
+Se enviaron 200 solicitudes al catálogo. Se obtuvieron 136 respuestas HTTP 200 y 64 respuestas distintas de 200. La disponibilidad observada fue del 68 %.
+
+El tiempo promedio de respuesta fue de 0.506 segundos y el máximo fue de 3.032 segundos. Las demoras cercanas a 3 segundos corresponden a la latencia simulada. Esta medición se guardó en availability-baseline.txt y sirve como referencia para las siguientes etapas.

@@ -1,0 +1,11 @@
+﻿Comparación de las cuatro mediciones del catálogo
+Cada corrida incluyó 200 solicitudes. Los tiempos se expresan en segundos.
+
+Etapa               SUCCESS   Respaldo   HTTP 200   Otros HTTP   Promedio   Máximo
+Línea base              136          0        136           64      0.506    3.032
+Timeout y Retry          90          0         90          110      0.636    1.515
+Fallback                 83        117        200            0      0.681    1.461
+Circuit Breaker          25        175        200            0      0.381    1.418
+
+Disponibilidad observada por etapa: 68 %, 45 %, 100 % y 100 %.
+El código HTTP 200 incluye tanto las respuestas normales como las de respaldo.

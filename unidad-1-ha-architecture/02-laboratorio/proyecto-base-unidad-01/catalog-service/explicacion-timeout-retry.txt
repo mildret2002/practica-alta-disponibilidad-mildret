@@ -1,0 +1,5 @@
+﻿Práctica 1.2. Timeout y Retry
+
+Se configuró un límite de 800 ms por intento y hasta dos reintentos. De 200 solicitudes, 90 devolvieron HTTP 200 y 110 devolvieron otro código. La disponibilidad observada fue del 45 %.
+
+En comparación con la línea base, el tiempo máximo bajó de 3.032 a 1.515 segundos y el promedio subió de 0.506 a 0.636 segundos. Una solicitud puede acumular el tiempo de varios intentos y sus pausas. La simulación también cambió para que algunas solicitudes fallaran en los tres intentos, por lo que la caída del 68 % al 45 % no se puede atribuir únicamente a Timeout y Retry. Los resultados se guardaron en resilience-timeout-retry.txt.

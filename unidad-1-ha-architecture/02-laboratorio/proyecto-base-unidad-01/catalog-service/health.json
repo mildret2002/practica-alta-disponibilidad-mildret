@@ -1,0 +1,9 @@
+{
+    "status": "UP",
+    "checks": [
+        {
+            "name": "catalog-database-check",
+            "status": "UP"
+        }
+    ]
+}

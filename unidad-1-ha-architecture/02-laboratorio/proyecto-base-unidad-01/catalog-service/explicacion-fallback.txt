@@ -1,0 +1,5 @@
+﻿Práctica 1.2. Fallback
+
+Se enviaron 200 solicitudes. Las 200 devolvieron HTTP 200, por lo que la disponibilidad observada fue del 100 %. Hubo 83 respuestas SUCCESS con el catálogo normal y 117 respuestas DEGRADED_CACHE con los productos de respaldo.
+
+El tiempo promedio fue de 0.681 segundos y el máximo de 1.461 segundos. En la etapa anterior, 110 solicitudes devolvieron un código distinto de 200. Con Fallback, las fallas simuladas pudieron recibir datos de respaldo después de los reintentos. Los resultados se guardaron en resilience-fallback.txt.
