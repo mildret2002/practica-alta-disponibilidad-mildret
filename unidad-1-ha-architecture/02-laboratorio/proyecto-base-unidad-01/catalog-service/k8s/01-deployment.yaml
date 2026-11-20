@@ -1,4 +1,4 @@
-﻿apiVersion: apps/v1
+apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: catalog-service
@@ -25,9 +25,9 @@ spec:
               name: http
 
           # Health Checks: Los endpoints fueron validados manualmente en Lab 1.1
-          # Ahora Kubernetes los valida automÃ¡ticamente
+          # Ahora Kubernetes los valida automáticamente
 
-          # Readiness Probe: Â¿EstÃ¡ listo para recibir trÃ¡fico?
+          # Readiness Probe: ¿Está listo para recibir tráfico?
           # Endpoint validado en Lab 1.1: curl http://localhost:8080/ready
           readinessProbe:
             httpGet:
@@ -38,7 +38,7 @@ spec:
             timeoutSeconds: 2
             failureThreshold: 2
 
-          # Liveness Probe: Â¿EstÃ¡ vivo el contenedor?
+          # Liveness Probe: ¿Está vivo el contenedor?
           # Endpoint validado en Lab 1.1: curl http://localhost:8080/live
           livenessProbe:
             httpGet:
@@ -48,4 +48,3 @@ spec:
             periodSeconds: 10
             timeoutSeconds: 2
             failureThreshold: 3
-
