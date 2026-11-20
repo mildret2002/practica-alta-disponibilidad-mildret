@@ -1,4 +1,4 @@
-apiVersion: apps/v1
+﻿apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: catalog-service
@@ -18,16 +18,16 @@ spec:
     spec:
       containers:
         - name: catalog-service
-          image: <tu-usuario-dockerhub>/catalog-service:1.0.0
+          image: mildretg/catalog-service:1.0.0
           imagePullPolicy: IfNotPresent
           ports:
             - containerPort: 8080
               name: http
 
           # Health Checks: Los endpoints fueron validados manualmente en Lab 1.1
-          # Ahora Kubernetes los valida automáticamente
+          # Ahora Kubernetes los valida automÃ¡ticamente
 
-          # Readiness Probe: ¿Está listo para recibir tráfico?
+          # Readiness Probe: Â¿EstÃ¡ listo para recibir trÃ¡fico?
           # Endpoint validado en Lab 1.1: curl http://localhost:8080/ready
           readinessProbe:
             httpGet:
@@ -38,7 +38,7 @@ spec:
             timeoutSeconds: 2
             failureThreshold: 2
 
-          # Liveness Probe: ¿Está vivo el contenedor?
+          # Liveness Probe: Â¿EstÃ¡ vivo el contenedor?
           # Endpoint validado en Lab 1.1: curl http://localhost:8080/live
           livenessProbe:
             httpGet:
@@ -48,3 +48,4 @@ spec:
             periodSeconds: 10
             timeoutSeconds: 2
             failureThreshold: 3
+

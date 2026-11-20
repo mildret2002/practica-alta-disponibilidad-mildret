@@ -1,0 +1,7 @@
+﻿Práctica 1.3 - Despliegue en Kubernetes
+
+Construí la aplicación Quarkus con Maven y después la imagen catalog-service:1.0.0 con Docker. Publiqué la imagen como mildretg/catalog-service:1.0.0 en Docker Hub. Configuré el Deployment para usar esa imagen y apliqué el Deployment y el Service en el clúster local de Docker Desktop.
+
+El nodo quedó Ready y el pod del catálogo quedó 1/1 Running, sin reinicios. Mediante port-forward probé /ready, /live y /v1/products: los tres respondieron HTTP 200. Los dos primeros indicaron UP. En la consulta observada, /v1/products devolvió DEGRADED_CACHE: el servicio siguió respondiendo gracias a los productos de respaldo ante una falla simulada. HTTP 200 en este caso indica que hubo respuesta, pero no que los datos vinieran del catálogo principal.
+
+Los comandos, el estado del pod y las respuestas se guardaron en evidencia-kubernetes.txt.
